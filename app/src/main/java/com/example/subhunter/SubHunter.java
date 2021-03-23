@@ -9,6 +9,8 @@ import android.util.Log;
 import android.view.Display;
 import android.view.MotionEvent;
 
+import java.util.Random;
+
 public class SubHunter extends Activity {
     // These variables can be "seen"
     // throughout the SubHunter class
@@ -59,6 +61,10 @@ public class SubHunter extends Activity {
         and after the player wins a game.
      */
     void newGame() {
+        Random random = new Random();
+        subHorizontalPosition = random.nextInt(gridWidth);
+        subVerticalPosition = random.nextInt(gridHeight);
+        shotsTaken = 0;
         Log.d("Debugging", "In newGame");
     }
 
