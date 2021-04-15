@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         android:layout_marginLeft="12dp"
-        android:layout_marginTop="168dp"
+        android:layout_marginTop="84dp"
         android:onClick="playSub"
         android:text="subHunter"
         app:layout_constraintStart_toEndOf="@+id/textView"
@@ -37,7 +37,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginBottom="16dp"
         android:ems="10"
-        android:hint="@string/edit_message"
+        android:hint="send feedback"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button"
@@ -56,6 +56,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/myTv" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="28dp"
+        android:text="PlayPong"
+        android:onClick="playPong"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subHunter" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

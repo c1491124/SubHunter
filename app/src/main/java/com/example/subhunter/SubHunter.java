@@ -23,4 +23,9 @@ public class SubHunter extends Activity {
         startActivity(intent);
 
     }
+
+    public void playPong(View view) {
+        Intent intent = new Intent(this,PongActivity.class);
+        startActivity(intent);
+    }
 }
