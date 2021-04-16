@@ -20,6 +20,7 @@ public class PongActivity extends Activity {
 
         mPongGame = new PongGame(this, size.x, size.y); // this = pongActivity
         setContentView(mPongGame);
+        
 
     }
     @Override
