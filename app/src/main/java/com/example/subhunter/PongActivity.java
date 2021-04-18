@@ -28,6 +28,7 @@ public class PongActivity extends Activity {
         super.onResume();
 
         // More code here later in the chapter
+        mPongGame.resume();
     }
 
     @Override
@@ -35,5 +36,6 @@ public class PongActivity extends Activity {
         super.onPause();
 
         // More code here later in the chapter
+        mPongGame.pause();
     }
 }
