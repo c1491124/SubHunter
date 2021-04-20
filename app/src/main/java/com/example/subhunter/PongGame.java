@@ -43,10 +43,12 @@ public class PongGame extends SurfaceView implements Runnable{
     private int mScore;
     private int mLives;
 
+
     // The PongGame constructor
     // Called when this line:
     // mPongGame = new PongGame(this, size.x, size.y);
     // is executed from PongActivity
+
     public PongGame(Context context, int x, int y) {
         // Super... calls the parent class
         // constructor of SurfaceView
@@ -62,8 +64,11 @@ public class PongGame extends SurfaceView implements Runnable{
         // Margin is 1.5% (1/75th) of screen width
         mFontMargin = mScreenX / 75;
 
-        // Initialize the objects
+
+        // Initialize the bat and ball
         mBall = new Ball(mScreenX);
+        mBat = new Bat(mScreenX, mScreenY);
+
 
         // ready for drawing with
         // getHolder is a method of SurfaceView
@@ -104,6 +109,8 @@ public class PongGame extends SurfaceView implements Runnable{
 
             // Draw the bat and ball
             mCanvas.drawRect(mBall.getRect(), mPaint);
+            mCanvas.drawRect(mBat.getRect(), mPaint);
+
 
             // Choose the font size
             mPaint.setTextSize(mFontSize);
@@ -119,6 +126,7 @@ public class PongGame extends SurfaceView implements Runnable{
             // Display the drawing on screen
             // unlockCanvasAndPost is a method of SurfaceView
             mOurHolder.unlockCanvasAndPost(mCanvas);
+
         }
     }
     private void printDebuggingText(){
@@ -177,6 +185,7 @@ public class PongGame extends SurfaceView implements Runnable{
     private void update() {
         // Update the bat and the ball
         mBall.update(mFPS);
+        mBat.update(mFPS);
 
     }
 
